@@ -1,0 +1,14 @@
+<h1>Game#score</h1>
+<p>Find me in app/views/game/score.html.erb</p>
+
+
+<% if @letters_used == false %>
+<h2>Sorry but <%= @obj["word"] %> cant't be bulid out of <%= @comp %></h2>
+<% elsif @obj["found"] == false %>
+<h2>Sorry but this is not an english word</h2>
+<% else %>
+<h2>Congrats mate</h2>
+<p>Score: <%= @obj["word"].length %></p>
+<% end %>
+
+<%= link_to "Play again", "/new" %>
